@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block title %} contact {% endblock title %}
+{% block body %}
+<form method='post' action='/contact'>
+{% csrf_token %}
+      <div class="text-center" mx=3, py=3>
+  <div class="vertical-center">
+  <div class="row g-3">
+  <div class="col">
+    <input type="text" class="form-control" id='name' name ='name' placeholder="First name" aria-label="First name">
+  </div>
+  <div class="col">
+    <input type="text" class="form-control"  id='name' name='name' placeholder="Last name" aria-label="Last name">
+  </div>
+  <div class="text-center" mx=3, py=3>
+    <div class="vertical-center">
+    <div class="row g-3">
+    <div class="col">
+    <input type="Email" class="form-control" id='email' name='email' placeholder="Email id" aria-label="Email">
+  </div>
+  <div class="col">
+    <input type="text" class="form-control" id='phone' name='Phone' placeholder="Phone Number" aria-label="Phone Number">
+  </div>
+  <div class="text-center" mx=3, py=3>
+  <div class="row">
+    <input type="text" class="decs" id='docs' name ='decs' placeholder="decs" aria-label="decs">
+  </div>
+  <button type="Submit" value="Submit" class="btn btn-primary"  absolute='center'>Submit</button>
+</form>
+
+{% endblock body %}
+

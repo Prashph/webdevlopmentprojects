@@ -1,0 +1,41 @@
+{% extends "dashboard/base.html"%}
+
+{% block body %}
+<div class="container">
+   
+    <div class="row" style="padding-top: 30px;">
+        <form method="POST" action="contact/">
+            {% csrf_token %}
+            <div class="row" style="padding-top: 20px;">
+                <div class="col">
+                    <input id="first_name" name="first_name" type="text" class="form-control" placeholder="First name"
+                        aria-label="First name">
+                </div>
+                <div class="col">
+                    <input id="last_name" name="last_name" type="text" class="form-control" placeholder="Last name"
+                        aria-label="Last name">
+                </div>
+            </div>
+            <div class="row" style="padding-top: 20px;">
+                <div class="col">
+                    <input id="email" name="email" type="email" class="form-control" placeholder="Email"
+                        aria-label="Email">
+                </div>
+                <div class="col">
+                    <input id="phone" name="phone" type="number" class="form-control" placeholder="Phone Number"
+                        aria-label="Phone Number">
+                </div>
+            </div>
+            <div class="row col-sm" style="padding-top: 20px;">
+                <div class="col">
+                    <input id="address" name="address" type="text" class="form-control" placeholder="Address"
+                        aria-label="Address">
+                </div>
+            </div>
+            <div style="padding-top: 10px; text-align:center;">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </form>
+    </div>
+
+    {% endblock body %}
